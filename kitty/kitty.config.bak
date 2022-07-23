@@ -1,7 +1,7 @@
 enable_audio_bell no
 font_family HackNerdFont
 disable_ligatures never
-url_color #61afef
+url_color #fff
 url_style curly
 shell zsh
 
@@ -9,11 +9,11 @@ shell zsh
 
 include theme.conf
 background_opacity 0.75
-font_size 9.15
+font_size 9.1
 
 tab_bar_edge bottom
 tab_bar_style powerline
-active_tab_background #607D8B
+active_tab_background #00D7FF
 active_tab_foreground #000000
 inactive_tab_background #004754
 inactive_tab_foreground #000000
@@ -30,7 +30,6 @@ remember_window_size  yes
 
 map ctrl+shift+n new_os_window_with_cwd
 
-map shift+alt+o new_window_with_cwd
 map shift+alt+e new_window_with_cwd
 map ctrl+shift+t new_tab_with_cwd
 
@@ -39,15 +38,17 @@ map shift+left move_window left
 map shift+right move_window right
 map shift+down move_window down
 
+enabled_layouts splits:split_axis=horizontal
+
 map alt+h neighboring_window left
 map alt+j neighboring_window down
 map alt+k neighboring_window up
 map alt+l neighboring_window right
 
-map alt+shift+left resize_window wider
+map alt+shift+left resize_window narrower
 map alt+shift+down resize_window shorter
 map alt+shift+up resize_window taller
-map alt+shift+right resize_window narrower
+map alt+shift+right resize_window wider
 
 map ctrl+plus change_font_size all +0.5
 map ctrl+minus change_font_size all -0.5
@@ -57,11 +58,9 @@ map alt+shift+o launch --location=hsplit_with_cwd
 
 map 'clear' clear_terminal active
 map ctrl+l send_text normal printf \'\\033[2J\\033[3J\\033[1;1H\'\x0d
+enabled_layouts grid
 
 repaint_delay 10
 input_delay 3
 sync_to_monitor yes
-
-map ctrl+shift+x goto_layout stack
-map ctrl+shift+z goto_layout grid
-map ctrl+shift+a goto_layout vertical
+map ctrl+shift+x toggle_layout stack
