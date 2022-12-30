@@ -5,6 +5,7 @@ colorscheme delek
 set number
 set expandtab
 set autoindent
+set smartindent
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4

@@ -13,8 +13,11 @@ ctrl + alt + t
 super + r
 	rofi -show drun	
 
-alt + f
+alt + shift + f
     firefox
+
+alt + shift + b
+    /opt/brave.com/brave/./brave
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
